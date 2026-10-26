@@ -1,0 +1,245 @@
+.experience-section {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(13, 19, 34, 0.4) 50%, var(--bg-primary) 100%);
+  position: relative;
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  position: relative;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* Marker Column */
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 440px) {
+  .timeline-marker {
+    display: none;
+  }
+}
+
+.marker-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(14, 23, 42, 0.9);
+  border: 2px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .marker-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}
+
+.marker-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+  margin-top: 0.5rem;
+  min-height: 80px;
+}
+
+/* Content Card */
+.timeline-content-card {
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 580px) {
+  .timeline-content-card {
+    padding: 1.5rem 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.experience-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .experience-card-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.experience-role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  word-break: break-word;
+}
+
+.company-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+}
+
+.meta-divider {
+  color: var(--text-dim);
+}
+
+.experience-type-pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-full);
+  color: #a5b4fc;
+  font-weight: 500;
+}
+
+.period-and-location {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.meta-icon {
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+}
+
+.experience-overview {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+/* Responsibilities */
+.responsibilities-block {
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities-title {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-icon {
+  color: var(--accent-cyan);
+}
+
+.responsibilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.responsibility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.resp-check-icon {
+  color: var(--accent-emerald);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+/* Tech Used */
+.experience-tech-used {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 600px) {
+  .experience-tech-used {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.tech-label {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.tech-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+

@@ -1,0 +1,212 @@
+.skills-section {
+  position: relative;
+}
+
+/* Filter Tabs */
+.skills-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-tab-btn {
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.filter-tab-btn.active {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Category Grid */
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-category-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .skill-category-card {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.category-card-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.category-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Skill Items */
+.skills-items-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .skills-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-card-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.skill-card-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
+
+.skill-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Individual Icon Colors */
+.icon-react { color: #00d8ff; }
+.icon-js { color: #f7df1e; }
+.icon-html { color: #e34f26; }
+.icon-css { color: #1572b6; }
+.icon-bootstrap { color: #7952b3; }
+.icon-node { color: #539e43; }
+.icon-express { color: #f8fafc; }
+.icon-api { color: #38bdf8; }
+.icon-jwt { color: #d63aff; }
+.icon-security { color: #fbbf24; }
+.icon-cron { color: #f43f5e; }
+.icon-mongo { color: #10aa50; }
+.icon-git { color: #f05032; }
+.icon-github { color: #ffffff; }
+.icon-postman { color: #ff6c37; }
+.icon-vscode { color: #007acc; }
+.icon-vercel { color: #ffffff; }
+.icon-openai { color: #10a37f; }
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.skill-level-badge {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* Summary Banner */
+.skills-summary-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(14, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 580px) {
+  .skills-summary-banner {
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (min-width: 860px) {
+  .skills-summary-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.summary-banner-text h4 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.summary-banner-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.workflow-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
